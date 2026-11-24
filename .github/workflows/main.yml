@@ -13,11 +13,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          api-level: 35
+          build-tools: '35.0.0'
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
